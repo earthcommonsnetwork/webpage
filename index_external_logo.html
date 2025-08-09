@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Earth Commons Network</title>
+  <meta name="description" content="A community-owned climate intelligence network protecting ecosystems and food security." />
+  <meta name="theme-color" content="#0b3d91" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --text: #e8eefc;
+      --muted: #9cb3e4;
+      --accent: #00c16a;
+      --accent-2: #2b6cf6;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, #12326a55, transparent),
+                  radial-gradient(1000px 700px at -10% 110%, #0f6a3a44, transparent),
+                  var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .container {
+      width: min(960px, 100%);
+      background: linear-gradient(180deg, #101a33, #0c1327);
+      border: 1px solid #1c2a52;
+      border-radius: 20px;
+      padding: clamp(24px, 4vw, 48px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    .logo img {
+      width: min(220px, 60vw);
+      height: auto;
+      filter: drop-shadow(0 6px 24px rgba(0,0,0,0.45));
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      margin: 18px 0 8px;
+    }
+    p.lead {
+      color: var(--muted);
+      font-size: clamp(16px, 2.5vw, 20px);
+      line-height: 1.6;
+      margin: 0 auto 24px;
+      max-width: 60ch;
+    }
+    .btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 650;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    .btn:hover { filter: brightness(1.05); }
+    .footer {
+      color: #a3b5e6;
+      opacity: 0.9;
+      font-size: 12px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Earth Commons Network Logo" />
+    </div>
+    <h1>Earth Commons Network</h1>
+    <p class="lead">Community-owned climate intelligence to protect ecosystems, food security, and the futures we share.</p>
+    <a class="btn" href="mailto:earthcommonsnetwork@gmail.com">Email Us</a>
+    <p class="footer">
+      © <span id="y"></span> Earth Commons Network · All Rights Reserved
+    </p>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
